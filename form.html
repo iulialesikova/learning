@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-widht,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Данные формы</title>
+    <style type="text/css">
+        body {
+            padding: 10px 10px 10px 10px;
+            margin: 10px;
+            line-height: 25px;
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <form method="post" action="script.php" enctype="multipart/form-data">
+        <fieldset>
+            <legend>Регистрация:</legend>
+            <label for="pets-name">Кличка питомца</label>
+            <input type="text" name="pets-name" placeholder="Hash"> <br />
+            <label for="owner-name">Имя владельца:</label>
+            <input type="text" name="owner-name" placeholder="Marina"> <br />
+            <label for="contacts">Контакты владельца:</label>
+            <input type="text" name="contacts">
+        </fieldset>
+        <div>
+            <label for="name">Порода</label>
+            <select name="name">
+                <option>Метис</option>
+                <option>Ориентальная</option>
+                <option>Сиамская</option>
+                <option>Персидская</option>
+                <option>Британская</option>
+            </select>
+        </div>
+        <label for="korm">Чем кормите животное?</label> <br />
+        <ul>
+            <li>Сухой корм <input type="checkbox" name="korm" value="Сухой корм"> </li>
+            <li>Влажный корм <input type="checkbox" name="korm" value="Сухой корм"> </li>
+            <li>Натуральный корм<input type="checkbox" name="korm" value="Сухой корм"> </li>
+        </ul>
+        <div>
+            <label for="sex">Пол животного</label> <br />
+            Кот <input type="radio" name="sex" checked value="Кот"> <br />
+            Кошка<input type="radio" name="sex" checked value="Кошка">
+        </div>
+        <textarea rows="10" cols="25">Если хотите добавть что-то важное, можно написать здесь</textarea>
+        <div>
+            <p>Можно добавить фото</p>
+            <input type="file" name="foto" multiple accept="*/*">
+        </div>
+        <div><input type="submit" value="Сохранить"> </div>
+
+    </form>
+</body>
+
+</html>
