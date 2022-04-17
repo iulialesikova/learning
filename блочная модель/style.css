@@ -1,0 +1,146 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    border: 0;
+    margin: 0px;
+    padding: 0px; /* чтоб не прописывать эти вещи, стоит подключить сразу normalizer.css в проект */
+    /* из-за overflow страница не прокручивается, и футера уже не видно */
+    /* overflow: hidden;  */  
+}
+
+/* html, */
+/* body, здесь не объединяем из-за конфликтов высоты */
+.main-container {
+    /* 100% - это 100% от родителя, то есть от body, а нам нужна высота экрана; здесь лучше использовать vh */
+    /* height: 100%; */
+    height: 100vh;
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+}
+
+header {
+    height: 72px;
+}
+
+.logo {
+    background-color: #d3cbc9;
+    text-align: center;
+    margin: 0%;
+    width: 100%;
+    height: 72px;
+    /* padding: 20px; */
+    line-height: 72px; /* для отцентровки текста */
+}
+
+/* .flex-container1 - избегай подобных названий, они выглядят как опечатки и не говорят читающему код ничего о том, на какую часть страницы они смотрят*/
+.flex-main { 
+    display: flex;
+    width: 100%;
+    flex-grow: 1;
+}
+
+.grund {
+    background-color: #fef08d;
+    text-align: center;
+    width: 70%;
+    vertical-align: middle;
+    /* padding-top: 300px; */
+}
+
+
+/* КОТ: для выравнивания по нижнему краю */
+.grund-text {
+    display: block;
+    width: 100%;
+}
+
+.content {
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+/* КОТ */
+
+
+aside {
+    background-color: #a7f094;
+    width: 30%;
+    /* justify-content: flex-end; */
+    justify-content: center;
+    text-align: center;
+    /* vertical-align: middle; не работает в блочных элементах, поэтому применен трюк ниже */
+    display: flex;
+    flex-direction: column;
+}
+
+/* .flex-container2 */
+.flex-content-inner {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    /* этот паддинг добавляет высоты контенту, и вся конструкция перестает вмещаться в 100vh, его можно реализовать иначе, но для этого шаблона он не нужен*/
+    /* padding: 100px; */
+    width: 100%;
+}
+
+
+.klein {
+    background-color: #c2cf1d;
+    /* width: 300px; здесь нужна ширина в половину блока flex-content-inner  */
+    flex-grow: 1;
+    height: 45px;
+    /* margin-right: 50px; */
+    margin-right: 50px;
+    margin-left: 50px;
+    margin-bottom: 50px;
+     /* padding-top: 10px; */
+     line-height: 45px; /* для отцентровки текста */
+}
+
+#gross { /* избегай спецсимоволов в коде, используется только латиница */
+    background-color: #c2cf1d;
+    /* width: 600px; здесь нужна ширина в весь блок flex-content-inner  */
+    flex-grow: 1;
+    min-width: calc(100% - 50px*2); /* минимальная ширина блока = 100% родителя минус отступы по сторонам) */
+    margin-right: 50px;
+    margin-left: 50px;
+    margin-bottom: 50px;
+    height: 45px;
+    /* padding-top: 10px; */
+    line-height: 45px; 
+}
+
+.flex-footer {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+}
+
+footer {
+    background-color: #d3cbc9;
+    width: 100%;
+    margin: 0%;
+    height: 92px;
+    bottom: 0;
+    justify-content: space-around;
+    /* flex-wrap: wrap; */
+    flex-wrap: nowrap; /* здесь не нужен перенос */
+}
+
+.sect {
+    background-color: #f6efef;
+    /* width: 300px; */
+    width: calc(25% - 20px*2); /* так как мы используем флекс, можно указывать в долях: 25% минус отступы с двух сторон */
+    height: 45px;
+    margin: 20px;
+    text-align: center;
+    /* padding-top: 10px; */
+    line-height: 45px; /* для отцентровки текста */
+}
