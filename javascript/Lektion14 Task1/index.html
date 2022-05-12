@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-widht,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Документ без названия</title>
+	<link href="test.css" rel="stylesheet">
+</head>
+
+<body>
+
+	<div class="contener">
+		<h1>Изучаем JS</h1>
+
+		<form name="formCl" onsubmit="btnClick(); return false;">
+			<input type="number" id="numX">
+			<br>
+			<input type="number" id="numY">
+			<br>
+			<select id="ope">
+				<option value="+">+</option>
+				<option value="-">-</option>
+				<option value="*">*</option>
+				<option value="/">/</option>
+			</select>
+			<br>
+			<input type="submit" value="=">
+		</form>
+		<br>
+
+		<p id="das" class="das">Результат: </p>
+	</div>
+
+	<script src="index.js"></script>
+
+</body>
+
+</html>

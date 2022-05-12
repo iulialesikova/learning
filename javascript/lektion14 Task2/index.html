@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Изменение цвета фона по клику мыши</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div onclick="changeColor(this)">1</div>
+    <div onclick="changeColor(this)">2</div>
+
+    <script>
+        function changeColor(sender) {
+            console.log(sender);
+            sender.classList.add("color");
+        }
+    </script>
+</body>
+
+</html>
