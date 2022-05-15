@@ -1,11 +1,7 @@
-console.log('Привет, математика!');
-
 
 function btnClick() {
 
 	var x, y, operator, result, form = document.formCl;
-
-
 
 	x = Number(form.numX.value);
 
