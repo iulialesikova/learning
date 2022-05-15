@@ -1,11 +1,23 @@
 function changeColor() {
-  let Color = document.getElementById('thema').value
-  if (Color == "green")
-    document.body.style.backgroundColor = "#57e389";
- 
-if (Color == "violet")
-  document.body.style.backgroundColor = "#8a2be2";
+  let selectedColor;
+  switch (document.getElementById('thema').value) {
+    case "green": {
+      selectedColor = "#57e389";
+      break;
+    }
+    case "violet": {
+      selectedColor = "#8a2be2";
+      break;
+    }
+    case "pink": {
+      selectedColor = "#c061cb";
+      break;
+    }
+    default: {
+      selectedColor = "#ffffff";
+      break;
+    }
+  }
 
-if (Color == "pink")
-  document.body.style.backgroundColor = "#c061cb";
+  document.body.style.backgroundColor = selectedColor;
 }
